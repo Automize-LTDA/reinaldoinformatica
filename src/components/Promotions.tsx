@@ -95,8 +95,7 @@ export const Promotions: React.FC<PromotionsProps> = ({ onAddToCart, onBuyNow, o
             {featuredOffer && (
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 onClick={() => onOpenDetails(featuredOffer)}
                 className="relative rounded-3xl overflow-hidden border border-techGreen/30 bg-gradient-to-br from-techDarkBlue/80 to-techBlack p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-8 shadow-[0_0_40px_rgba(0,255,136,0.1)] group cursor-pointer select-none"
               >
@@ -180,8 +179,7 @@ export const Promotions: React.FC<PromotionsProps> = ({ onAddToCart, onBuyNow, o
               <motion.div
                 key={product.id}
                 initial={{ opacity: 0, x: 25 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
                 onClick={() => onOpenDetails(product)}
                 className="flex gap-4 p-4 rounded-2xl bg-techDarkBlue/40 border border-white/5 hover:border-techBlue/20 hover:bg-techDarkBlue/60 transition-all duration-300 group cursor-pointer select-none"
               >

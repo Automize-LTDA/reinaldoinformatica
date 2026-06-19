@@ -5,7 +5,6 @@ import { Categories } from './components/Categories';
 import { Promotions } from './components/Promotions';
 import { Products } from './components/Products';
 import { Services } from './components/Services';
-import { PcBuilder } from './components/PcBuilder';
 import { About } from './components/About';
 import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
@@ -157,10 +156,7 @@ function App() {
             {/* 5. Serviços */}
             <Services />
 
-            {/* 6. Monte seu PC */}
-            <PcBuilder />
-
-            {/* 7. Sobre a Empresa */}
+            {/* 6. Sobre a Empresa */}
             <About />
 
             {/* 8. Depoimentos */}

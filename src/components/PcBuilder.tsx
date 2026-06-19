@@ -108,7 +108,7 @@ export const PcBuilder: React.FC = () => {
   };
 
   return (
-    <section id="pc-builder" className="py-20 bg-techBlack relative overflow-hidden">
+    <div className="w-full relative">
       {/* Background radial glows */}
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-techBlue/5 rounded-full blur-[100px] pointer-events-none" />
 
@@ -238,6 +238,6 @@ export const PcBuilder: React.FC = () => {
         </div>
 
       </div>
-    </section>
+    </div>
   );
 };
