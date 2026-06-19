@@ -1,10 +1,10 @@
 import React from 'react';
 import { X, Star, ShoppingCart, Check, AlertTriangle } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import type { Product } from '../types';
 
 interface ProductDetailModalProps {
-  product: Product | null;
+  product: Product;
   onClose: () => void;
   onAddToCart: (product: Product) => void;
   onBuyNow: (product: Product) => void;
@@ -16,15 +16,12 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
   onAddToCart,
   onBuyNow,
 }) => {
-  if (!product) return null;
-
   const formatPrice = (value: number) => {
     return value.toFixed(2).replace('.', ',');
   };
 
   return (
-    <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -168,6 +165,5 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
           </div>
         </motion.div>
       </div>
-    </AnimatePresence>
   );
 };

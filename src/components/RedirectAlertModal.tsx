@@ -1,10 +1,9 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { X, ExternalLink } from 'lucide-react';
 import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface RedirectAlertModalProps {
-  isOpen: boolean;
   onClose: () => void;
   onConfirm: () => void;
   productName?: string;
@@ -13,22 +12,18 @@ interface RedirectAlertModalProps {
 }
 
 export const RedirectAlertModal: React.FC<RedirectAlertModalProps> = ({
-  isOpen,
   onClose,
   onConfirm,
   productName,
   totalPrice,
   isCart,
 }) => {
-  if (!isOpen) return null;
-
   const formatPrice = (value: number) => {
     return value.toFixed(2).replace('.', ',');
   };
 
   return (
-    <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -108,6 +103,5 @@ export const RedirectAlertModal: React.FC<RedirectAlertModalProps> = ({
           </div>
         </motion.div>
       </div>
-    </AnimatePresence>
   );
 };

@@ -105,7 +105,7 @@ export const Contact: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-7 bg-techDarkBlue/30 backdrop-blur-xl border border-white/5 hover:border-white/10 p-6 sm:p-10 rounded-[2.5rem] flex flex-col justify-between shadow-[0_15px_40px_rgba(0,0,0,0.4)] transition-all duration-300"
+            className="lg:col-span-7 bg-[#080d1a] border border-white/5 hover:border-white/10 p-6 sm:p-10 rounded-[2.5rem] flex flex-col justify-between shadow-[0_15px_40px_rgba(0,0,0,0.4)] transition-all duration-300"
           >
             <div>
               <h3 className="text-base font-bold text-white mb-8 uppercase tracking-wider flex items-center gap-3">
@@ -233,7 +233,7 @@ export const Contact: React.FC = () => {
               {/* Widget 1: Endereço */}
               <motion.div 
                 whileHover={{ y: -4, scale: 1.01 }}
-                className="p-5 rounded-3xl bg-techDarkBlue/30 backdrop-blur-xl border border-white/5 hover:border-techBlue/30 hover:shadow-[0_5px_20px_rgba(0,102,255,0.08)] flex items-start gap-4 transition-all duration-300 text-left border-l-2 border-l-techBlue"
+                className="p-5 rounded-3xl bg-[#0c1428] border border-white/5 hover:border-techBlue/30 hover:shadow-[0_5px_20px_rgba(0,102,255,0.08)] flex items-start gap-4 transition-all duration-300 text-left border-l-2 border-l-techBlue"
               >
                 <div className="w-10 h-10 rounded-xl bg-techBlue/10 text-techBlue flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(0,102,255,0.1)]">
                   <MapPin className="w-5 h-5" />
@@ -249,7 +249,7 @@ export const Contact: React.FC = () => {
               {/* Widget 2: WhatsApp e Telefones */}
               <motion.div 
                 whileHover={{ y: -4, scale: 1.01 }}
-                className="p-5 rounded-3xl bg-techDarkBlue/30 backdrop-blur-xl border border-white/5 hover:border-techGreen/30 hover:shadow-[0_5px_20px_rgba(0,255,136,0.08)] flex items-start gap-4 transition-all duration-300 text-left border-l-2 border-l-techGreen"
+                className="p-5 rounded-3xl bg-[#0c1428] border border-white/5 hover:border-techGreen/30 hover:shadow-[0_5px_20px_rgba(0,255,136,0.08)] flex items-start gap-4 transition-all duration-300 text-left border-l-2 border-l-techGreen"
               >
                 <div className="w-10 h-10 rounded-xl bg-techGreen/10 text-techGreen flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(0,255,136,0.1)] animate-pulse-slow">
                   <Phone className="w-5 h-5" />
@@ -264,7 +264,7 @@ export const Contact: React.FC = () => {
               {/* Widget 3: E-mail */}
               <motion.div 
                 whileHover={{ y: -4, scale: 1.01 }}
-                className="p-5 rounded-3xl bg-techDarkBlue/30 backdrop-blur-xl border border-white/5 hover:border-techBlue/30 hover:shadow-[0_5px_20px_rgba(0,102,255,0.08)] flex items-start gap-4 transition-all duration-300 text-left border-l-2 border-l-techBlue"
+                className="p-5 rounded-3xl bg-[#0c1428] border border-white/5 hover:border-techBlue/30 hover:shadow-[0_5px_20px_rgba(0,102,255,0.08)] flex items-start gap-4 transition-all duration-300 text-left border-l-2 border-l-techBlue"
               >
                 <div className="w-10 h-10 rounded-xl bg-techBlue/10 text-techBlue flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(0,102,255,0.1)]">
                   <Mail className="w-5 h-5" />
@@ -280,7 +280,7 @@ export const Contact: React.FC = () => {
               {/* Widget 4: Horários */}
               <motion.div 
                 whileHover={{ y: -4, scale: 1.01 }}
-                className="p-5 rounded-3xl bg-techDarkBlue/30 backdrop-blur-xl border border-white/5 hover:border-techGreen/30 hover:shadow-[0_5px_20px_rgba(0,255,136,0.08)] flex items-start gap-4 transition-all duration-300 text-left border-l-2 border-l-techGreen"
+                className="p-5 rounded-3xl bg-[#0c1428] border border-white/5 hover:border-techGreen/30 hover:shadow-[0_5px_20px_rgba(0,255,136,0.08)] flex items-start gap-4 transition-all duration-300 text-left border-l-2 border-l-techGreen"
               >
                 <div className="w-10 h-10 rounded-xl bg-techGreen/10 text-techGreen flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(0,255,136,0.1)]">
                   <Clock className="w-5 h-5" />
@@ -294,7 +294,7 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Social connection quick card */}
-            <div className="bg-techDarkBlue/30 backdrop-blur-xl border border-white/5 p-6 rounded-[2rem] space-y-4 shadow-[0_10px_30px_rgba(0,0,0,0.3)] text-center">
+            <div className="bg-[#0c1428] border border-white/5 p-6 rounded-[2rem] space-y-4 shadow-[0_10px_30px_rgba(0,0,0,0.3)] text-center">
               <span className="block text-[10px] text-white/40 font-bold uppercase tracking-wider text-center">Conectar nas Redes</span>
               <div className="flex justify-center">
                 {/* Instagram Quick Link */}

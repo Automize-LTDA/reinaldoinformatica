@@ -10,7 +10,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
   const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    if (href === '#loja') {
+    if (href === '#loja' || href === '#pc-builder') {
       onNavigate('store', '#loja');
     } else {
       onNavigate('home', href);

@@ -11,6 +11,7 @@ import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { RedirectAlertModal } from './components/RedirectAlertModal';
+import { AnimatePresence } from 'framer-motion';
 
 const Products = lazy(() => import('./components/Products').then(m => ({ default: m.Products })));
 import type { Product, CartItem } from './types';
@@ -199,24 +200,31 @@ function App() {
       <WhatsAppButton />
 
       {/* Product Details Modal */}
-      <ProductDetailModal
-        product={selectedProductDetails}
-        onClose={() => setSelectedProductDetails(null)}
-        onAddToCart={handleAddToCart}
-        onBuyNow={handleBuyNow}
-      />
+      <AnimatePresence>
+        {selectedProductDetails && (
+          <ProductDetailModal
+            product={selectedProductDetails}
+            onClose={() => setSelectedProductDetails(null)}
+            onAddToCart={handleAddToCart}
+            onBuyNow={handleBuyNow}
+          />
+        )}
+      </AnimatePresence>
 
       {/* WhatsApp Redirect Confirmation Modal */}
-      <RedirectAlertModal
-        isOpen={redirectModalInfo.isOpen}
-        onClose={() => setRedirectModalInfo({ isOpen: false, whatsappUrl: '' })}
-        onConfirm={() => {
-          window.open(redirectModalInfo.whatsappUrl, '_blank');
-        }}
-        productName={redirectModalInfo.productName}
-        totalPrice={redirectModalInfo.totalPrice}
-        isCart={redirectModalInfo.isCart}
-      />
+      <AnimatePresence>
+        {redirectModalInfo.isOpen && (
+          <RedirectAlertModal
+            onClose={() => setRedirectModalInfo({ isOpen: false, whatsappUrl: '' })}
+            onConfirm={() => {
+              window.open(redirectModalInfo.whatsappUrl, '_blank');
+            }}
+            productName={redirectModalInfo.productName}
+            totalPrice={redirectModalInfo.totalPrice}
+            isCart={redirectModalInfo.isCart}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
