@@ -112,7 +112,7 @@ export const Products: React.FC<ProductsProps> = ({
   }, [searchQuery, selectedCategory, maxPrice, onlyInStock, onlyPromotions, sortBy]);
 
   return (
-    <section id="loja" className="py-20 bg-techDarkBlue/20 relative overflow-hidden">
+    <section id="loja" className="pt-2 pb-20 bg-techDarkBlue/20 relative overflow-hidden">
       {/* Background visual accents */}
       <div className="absolute top-1/4 right-0 w-80 h-80 bg-techGreen/5 rounded-full blur-[100px] pointer-events-none" />
 
