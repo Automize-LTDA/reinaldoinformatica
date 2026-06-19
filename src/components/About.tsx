@@ -66,6 +66,7 @@ export const About: React.FC = () => {
               <img
                 src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop"
                 alt="Equipe técnica Reinaldo Informática"
+                loading="lazy"
                 className="w-full h-full object-cover filter brightness-90 saturate-50 hover:saturate-100 transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-techBlack via-techBlack/30 to-transparent" />

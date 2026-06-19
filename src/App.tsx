@@ -1,9 +1,8 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Categories } from './components/Categories';
 import { Promotions } from './components/Promotions';
-import { Products } from './components/Products';
 import { Services } from './components/Services';
 import { About } from './components/About';
 import { Testimonials } from './components/Testimonials';
@@ -12,7 +11,18 @@ import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { RedirectAlertModal } from './components/RedirectAlertModal';
+
+const Products = lazy(() => import('./components/Products').then(m => ({ default: m.Products })));
 import type { Product, CartItem } from './types';
+
+const StoreLoadingSpinner = () => (
+  <div className="min-h-[50vh] flex flex-col items-center justify-center space-y-4">
+    <div className="w-10 h-10 rounded-full border-4 border-techBlue/10 border-t-techBlue animate-spin" />
+    <p className="text-xs font-bold text-techGray/60 uppercase tracking-widest animate-pulse font-sans">
+      Carregando Loja...
+    </p>
+  </div>
+);
 
 function App() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -168,16 +178,18 @@ function App() {
         ) : (
           <div className="pt-24 sm:pt-28">
             {/* 4. Loja de Produtos */}
-            <Products
-              onAddToCart={handleAddToCart}
-              onBuyNow={handleBuyNow}
-              onOpenDetails={(p) => setSelectedProductDetails(p)}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              selectedCategory={selectedCategory}
-              setSelectedCategory={setSelectedCategory}
-              onGoBack={() => handleNavigate('home')}
-            />
+            <Suspense fallback={<StoreLoadingSpinner />}>
+              <Products
+                onAddToCart={handleAddToCart}
+                onBuyNow={handleBuyNow}
+                onOpenDetails={(p) => setSelectedProductDetails(p)}
+                searchQuery={searchQuery}
+                setSearchQuery={setSearchQuery}
+                selectedCategory={selectedCategory}
+                setSelectedCategory={setSelectedCategory}
+                onGoBack={() => handleNavigate('home')}
+              />
+            </Suspense>
           </div>
         )}
       </main>
