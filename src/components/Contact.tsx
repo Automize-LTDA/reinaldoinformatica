@@ -293,10 +293,10 @@ export const Contact: React.FC = () => {
               </motion.div>
             </div>
 
-            {/* Social Grid connection quick cards */}
-            <div className="bg-techDarkBlue/30 backdrop-blur-xl border border-white/5 p-6 rounded-[2rem] space-y-4 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
-              <span className="block text-[10px] text-white/40 font-bold uppercase tracking-wider text-left">Conectar nas Redes</span>
-              <div className="grid grid-cols-2 gap-3.5">
+            {/* Social connection quick card */}
+            <div className="bg-techDarkBlue/30 backdrop-blur-xl border border-white/5 p-6 rounded-[2rem] space-y-4 shadow-[0_10px_30px_rgba(0,0,0,0.3)] text-center">
+              <span className="block text-[10px] text-white/40 font-bold uppercase tracking-wider text-center">Conectar nas Redes</span>
+              <div className="flex justify-center">
                 {/* Instagram Quick Link */}
                 <motion.a
                   href="https://instagram.com"
@@ -304,7 +304,7 @@ export const Contact: React.FC = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 border border-pink-500/10 hover:border-pink-500/30 text-white rounded-2xl text-xs font-bold transition-all group cursor-pointer"
+                  className="flex items-center justify-center gap-2 px-6 py-3 w-full max-w-[200px] bg-gradient-to-r from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 border border-pink-500/10 hover:border-pink-500/30 text-white rounded-2xl text-xs font-bold transition-all group cursor-pointer"
                 >
                   <svg className="w-4 h-4 text-pink-500 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -312,20 +312,6 @@ export const Contact: React.FC = () => {
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
                   <span>Instagram</span>
-                  <ExternalLink className="w-3 h-3 text-white/20 group-hover:text-white/60 transition-colors" />
-                </motion.a>
-
-                {/* WhatsApp Quick Chat */}
-                <motion.a
-                  href="https://wa.me/5581999374666?text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20d%C3%BAvidas."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="flex items-center justify-center gap-2 px-4 py-3 bg-techGreen/5 hover:bg-techGreen/10 border border-techGreen/10 hover:border-techGreen/30 text-white rounded-2xl text-xs font-bold transition-all group cursor-pointer"
-                >
-                  <WhatsAppIcon className="w-4 h-4 fill-techGreen group-hover:scale-110 transition-transform" />
-                  <span>WhatsApp</span>
                   <ExternalLink className="w-3 h-3 text-white/20 group-hover:text-white/60 transition-colors" />
                 </motion.a>
               </div>
