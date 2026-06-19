@@ -150,16 +150,7 @@ export const Header: React.FC<HeaderProps> = ({
                 )}
               </button>
 
-              {/* WhatsApp CTA Button */}
-              <a
-                href="https://wa.me/5581999374666?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Reinaldo%20Inform%C3%A1tica%20e%20gostaria%20de%20saber%20mais%20sobre%20produtos%20e%20servi%C3%A7os."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:flex items-center gap-1.5 bg-techGreen hover:bg-[#00e577] text-techBlack font-bold py-2 px-4 rounded-full text-xs shadow-[0_0_12px_rgba(0,255,136,0.15)] hover:shadow-[0_0_18px_rgba(0,255,136,0.3)] transition-all duration-300"
-              >
-                <WhatsAppIcon className="w-4 h-4 fill-techBlack" />
-                <span>WhatsApp</span>
-              </a>
+
 
               {/* Mobile Menu Button */}
               <button
@@ -216,18 +207,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </nav>
               </div>
 
-              {/* Mobile CTA */}
-              <div>
-                <a
-                  href="https://wa.me/5581999374666?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Reinaldo%20Inform%C3%A1tica%20e%20gostaria%20de%20saber%20mais%20sobre%20produtos%20e%20servi%C3%A7os."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-techGreen text-techBlack font-bold py-3 rounded-xl text-sm shadow-[0_0_15px_rgba(0,255,136,0.2)]"
-                >
-                  <WhatsAppIcon className="w-4 h-4 fill-techBlack" />
-                  <span>WhatsApp</span>
-                </a>
-              </div>
+
             </motion.div>
           </>
         )}
